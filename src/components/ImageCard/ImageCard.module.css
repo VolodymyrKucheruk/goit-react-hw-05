@@ -1,0 +1,18 @@
+.wrapper {
+}
+
+.img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  cursor: zoom-in;
+  border: none;
+  outline: transparent;
+  border-radius: 10%;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -7px;
+  transition: transform 250ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.img:hover {
+  transform: skew(1.5deg, -1.5deg);
+  border: 2px solid rgb(111, 255, 159);
+}

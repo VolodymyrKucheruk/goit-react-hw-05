@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 85px auto 55px;
+  background-color: rgba(223, 249, 250, 0.833);
+  box-shadow: rgb(255, 255, 255) 8px 9px 15px 2px inset,
+    rgb(255, 255, 255) -5px -9px 15px 6px inset;
+  border-radius: 2% 2% 8% 8%;
+}
