@@ -40,9 +40,12 @@ img {
   max-width: 100%;
 }
 #root {
+  width: 100svw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   max-width: 1440px;
-  padding: 105px;
+  padding: 100px;
 }
