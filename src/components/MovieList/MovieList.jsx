@@ -9,7 +9,8 @@ export const MovieList = ({ items }) => {
     <ul className={css.list}>
       {items.map((item) => (
         <li key={item.id} className={css.item}>
-          <NavLink to={`/movies/${items.id}`} state={{ from: location }}>
+        <NavLink to={`/movies/${item.id}`} state={{ from: location }}>
+
             <img
               className={css.img}
               src={
