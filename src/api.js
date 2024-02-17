@@ -20,7 +20,7 @@ export const getTrendingMovies = async ({ abortController }) => {
 
 export const getCasts = async ({movieId}) => {
   const response = await axios.get(`movie/${movieId}/credits`, options);
-  return response.data;
+  return response.data.cast;
 };
 
 export const getMovieDetails = async ({movieId}) => {

@@ -16,8 +16,8 @@ const MovieCast = () => {
       try {
         setIsLoading(true);
         const fetchedCasts = await getCasts({ movieId });
-        console.log(setCasts(fetchedCasts.data));
-        setCasts(fetchedCasts.data);
+        console.log(fetchedCasts);
+        setCasts(fetchedCasts);
       } catch {
         toast.error("Something was wrong", {
           position: "top-right",
