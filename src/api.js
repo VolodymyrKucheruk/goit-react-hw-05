@@ -12,18 +12,18 @@ const options = {
 };
 
 export const getTrendingMovies = async ({ abortController }) => {
-  const response = await axios.get(`trending/movie/day`, {
-    ...options,
+  const response = await axios.get(`trending/movie/day`, options, {
     signal: abortController.signal,
   });
+  return response.data.results;
+};
 
+export const getCasts = async ({movieId}) => {
+  const response = await axios.get(`movie/${movieId}/credits`, options);
   return response.data;
 };
 
-export const getMovieDetails = async ({ abortController, movieId }) => {
-  const response = await axios.get(`movie/${movieId}`, {
-    ...options,
-    signal: abortController.signal,
-  });
+export const getMovieDetails = async ({movieId}) => {
+  const response = await axios.get(`movie/${movieId}`, options);
   return response.data;
 };

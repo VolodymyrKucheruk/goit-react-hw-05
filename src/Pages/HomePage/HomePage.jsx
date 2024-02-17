@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { getTrendingMovies } from "../../api";
 import { MovieList } from "../../components/MovieList/MovieList";
 import css from "./HomePage.module.css";
+import Loader from "../../components/Loader/Loader";
 
 const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -17,7 +18,7 @@ const HomePage = () => {
         const fetchedMovies = await getTrendingMovies({
           abortController: controller,
         });
-        setTrendingMovies(fetchedMovies.results);
+        setTrendingMovies(fetchedMovies);
       } catch {
         toast.error("Something was wrong", {
           position: "top-right",
@@ -34,7 +35,7 @@ const HomePage = () => {
   return (
     <>
       <h1 className={css.title}>Trnding today</h1>
-      {isLoading ? <p>Loading...</p> : <MovieList items={trendingMovies} />}
+      {isLoading ? <Loader /> : <MovieList items={trendingMovies} />}
     </>
   );
 };
