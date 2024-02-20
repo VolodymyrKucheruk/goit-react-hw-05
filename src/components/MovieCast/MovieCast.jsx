@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import noPicture from "../image/unnamed.png";
 import Loader from "../Loader/Loader";
+import css from "./MovieCast.module.css"
 
 const MovieCast = () => {
   const { movieId } = useParams();
@@ -16,7 +17,6 @@ const MovieCast = () => {
       try {
         setIsLoading(true);
         const fetchedCasts = await getCasts({ movieId });
-        console.log(fetchedCasts);
         setCasts(fetchedCasts);
       } catch {
         toast.error("Something was wrong", {
@@ -34,12 +34,14 @@ const MovieCast = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div>
+        
+        <div className={css.wrapper}>
+        <h1 className={css.title}>Movie Cast</h1>
           {casts.length !== 0 ? (
-            <ul>
+            <ul className={css.list}>
               {casts.map((cast) => (
-                <li key={cast.id}>
-                  <img
+                <li className={css.item} key={cast.id}>
+                  <img className={css.image}
                     src={
                       cast.profile_path
                         ? `https://image.tmdb.org/t/p/w500${cast.profile_path}`
@@ -47,12 +49,12 @@ const MovieCast = () => {
                     }
                     alt={cast.name}
                   />
-                  <p>{cast.name}</p>
+                  <p className={css.actorNameText}>{cast.name}</p>
                 </li>
               ))}
             </ul>
           ) : (
-            <p>Sorry, we dont have any casts for this movie.</p>
+            <p className={css.error}>Sorry, we dont have any casts for this movie.</p>
           )}
         </div>
       )}

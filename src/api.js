@@ -27,3 +27,12 @@ export const getMovieDetails = async ({movieId}) => {
   const response = await axios.get(`movie/${movieId}`, options);
   return response.data;
 };
+
+export const getReviews = async ({movieId}) => {
+  const response = await axios.get(`movie/${movieId}/reviews`, options);
+  return response.data.results;
+};
+export const searchMovies = async (filterByName) => {
+  const response = await axios.get(`/search/movie?query=${filterByName}`, options);
+  return response.data.results;
+};

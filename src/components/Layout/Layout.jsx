@@ -1,17 +1,25 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
-import css from "./Layout.module.css"
+import { NavLink, Outlet } from "react-router-dom";
+import css from "./Layout.module.css";
+import clsx from "clsx";
 
-export default function Layout() {
+ const Layout = () => {
+  const buildLinkClass = ({ isActive }) => {
+    return clsx(css.link, isActive && css.active);
+  };
   return (
     <>
       <header className={css.header}>
-        <nav>
-          <NavLink className={css.home}to="/">Home</NavLink>
-          <NavLink className={css.movies}to="/movies">Movies</NavLink>
+        <nav className={css.nav}>
+          <NavLink className={buildLinkClass} to="/">
+            Home
+          </NavLink>
+          <NavLink className={buildLinkClass} to="/movies">
+            Movies
+          </NavLink>
         </nav>
       </header>
       <Outlet />
-
     </>
   );
 }
+export default Layout;

@@ -9,14 +9,21 @@ a {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Georgia", sans-serif;
   line-height: 1.5;
   letter-spacing: -0.2px;
   margin: 0 auto;
+  min-height: 100svh;
   box-sizing: content-box;
-  background-color: #ffffff;
+  background-image: radial-gradient(circle, rgb(255, 166, 0), transparent 20%, orangered);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: orange;
+  color: #121212;
+  backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
+  
 }
 
 h1,
@@ -47,5 +54,8 @@ img {
   align-items: center;
   justify-content: center;
   max-width: 1440px;
-  padding: 100px;
+  padding: 150px;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+  
 }
