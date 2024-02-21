@@ -21,7 +21,6 @@ export const Search = ({ onSubmit }) => {
           id="search"
         ></input>
         <span className={css.caret}></span>
-        
       </form>
     </>
   );

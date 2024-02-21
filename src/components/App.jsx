@@ -15,7 +15,7 @@ const Layout = lazy(() => import("./Layout/Layout.jsx"));
 export const App = () => {
   return (
     <div>
-      <Suspense fallback={<Loader/>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />

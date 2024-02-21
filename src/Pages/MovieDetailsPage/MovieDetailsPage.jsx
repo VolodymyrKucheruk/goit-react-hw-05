@@ -59,8 +59,9 @@ const MovieDetailsPage = () => {
             <h1 className={css.title}>{movieDetails.original_title}</h1>
             <p className={css.score}>
               {" "}
-              <FcBullish/>
-              User score:{Math.floor(movieDetails.vote_average * 10)}%
+              <FcBullish />
+              <span className={css.scoreText}>User score:</span>
+              {Math.floor(movieDetails.vote_average * 10)}%
             </p>
             <h2 className={css.subtitle}>Overview</h2>
             <p className={css.textOwerview}>{movieDetails.overview}</p>

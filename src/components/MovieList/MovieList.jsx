@@ -27,6 +27,7 @@ export const MovieList = ({ items }) => {
               </div>
               <div className={css.cardBack}>
                 <p className={css.title}> {item.title}</p>
+                <p className={css.date}>Date of release: {item.release_date}</p>
               </div>
             </li>
           </div>

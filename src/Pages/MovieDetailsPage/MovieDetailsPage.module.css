@@ -2,7 +2,6 @@
   display: flex;
   align-items: start;
   margin-bottom: 50px;
-  
 }
 
 .imageContentWrapper {
@@ -27,8 +26,8 @@
   background: #caf0f8;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-  rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-  rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   background-color: #f97101;
   color: #ffffff;
   transition: 2s cubic-bezier(0.645, 0.045, 0.355, 1) linear;
@@ -86,20 +85,21 @@
 }
 .title {
   font-size: 4rem;
-  
 }
 .react-icons {
-   size: 2em;
-  }
+  size: 2em;
+}
 .score {
   font-size: 1.5rem;
   text-shadow: none;
- 
+}
+.scoreText {
+  margin: 0 10px 0 5px;
 }
 .subtitle {
   font-size: 2rem;
-  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 .textOwerview {
   font-size: 1.2rem;
@@ -108,10 +108,9 @@
   text-shadow: none;
 }
 .geners {
-  
   font-size: 1.7rem;
-  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 .wrapperGenres {
   display: flex;

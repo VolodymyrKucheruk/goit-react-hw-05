@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import css from "./Layout.module.css";
 import clsx from "clsx";
 
- const Layout = () => {
+const Layout = () => {
   const buildLinkClass = ({ isActive }) => {
     return clsx(css.link, isActive && css.active);
   };
@@ -21,5 +21,5 @@ import clsx from "clsx";
       <Outlet />
     </>
   );
-}
+};
 export default Layout;

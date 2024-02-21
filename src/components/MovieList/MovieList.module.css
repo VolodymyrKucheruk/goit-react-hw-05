@@ -13,14 +13,14 @@
   height: 100%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.667) 0px 2px 4px,
-    rgba(0, 0, 0, 0.537) 0px 7px 13px -3px, rgba(0, 0, 0, 0.811) 0px -3px 0px inset;
+    rgba(0, 0, 0, 0.537) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.811) 0px -3px 0px inset;
 }
 
 .card {
   width: 210px;
   height: 300px;
   perspective: 1000px;
-  
 }
 
 .cardInner {
@@ -59,6 +59,7 @@
   backdrop-filter: blur(8px);
   color: #000000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -68,4 +69,12 @@
   padding: 3px;
   transform: rotateY(180deg);
   cursor: pointer;
+}
+.title {
+  margin: auto;
+}
+.date {
+  font-size: 14px;
+  color: #b62929;
+  margin-top: auto;
 }

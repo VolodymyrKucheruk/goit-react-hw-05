@@ -40,7 +40,10 @@ const MoviesPage = () => {
       {isLoading ? (
         <Loader />
       ) : searchMoviesResult.length === 0 && filterByName ? (
-        <h2>Oops, nothing found for this query.</h2>
+        <>
+          <Search onSubmit={changeFilter} />
+          <h2>Oops, nothing found for this query.</h2>
+        </>
       ) : (
         <div>
           <Search onSubmit={changeFilter} />
